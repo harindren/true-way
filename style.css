@@ -1,0 +1,835 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #172033;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    min-height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.logo-mark {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #172033;
+    font-size: 13px;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #172033;
+}
+
+
+/* =========================
+   SKIP LINK (ACCESSIBILITY)
+========================= */
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 2000;
+}
+
+.skip-link:focus {
+    left: 20px;
+    top: 20px;
+    width: auto;
+    height: auto;
+    padding: 12px 20px;
+    background: #172033;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 750px;
+    display: flex;
+    align-items: center;
+    padding: 100px 8%;
+    background: #f4f6f8;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 82px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.hero h1 span {
+    opacity: 0.55;
+}
+
+.hero-text {
+    max-width: 700px;
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #3f4a5d;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.primary {
+    background: #172033;
+    color: white;
+}
+
+.primary:hover {
+    background: #2b374d;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    border: 1px solid #172033;
+    color: #172033;
+}
+
+.secondary:hover {
+    background: #172033;
+    color: white;
+}
+
+.hero-badge {
+    margin-top: 50px;
+    padding-left: 20px;
+    border-left: 3px solid #172033;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.hero-badge strong {
+    font-size: 14px;
+}
+
+.hero-badge span {
+    font-size: 13px;
+    color: #596273;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 130px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.section-heading h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.about-text {
+    font-size: 18px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+.about-text strong {
+    color: #172033;
+}
+
+
+/* =========================
+   HUMANISING THE WORKPLACE
+========================= */
+
+.humanising {
+    padding: 130px 8%;
+    background: #172033;
+    color: white;
+}
+
+.humanising-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.humanising .eyebrow {
+    color: #c7ccd5;
+}
+
+.humanising .section-heading h2 {
+    max-width: 800px;
+}
+
+.humanising-text {
+    max-width: 850px;
+    margin-top: 40px;
+}
+
+.humanising-text p {
+    color: #c7ccd5;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.humanising-text .lead {
+    color: white;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.humanising-text strong {
+    color: white;
+}
+
+.humanising-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 70px;
+}
+
+.humanising-card {
+    padding: 35px;
+    background: #1f293b;
+    border: 1px solid #303a4d;
+    min-height: 220px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.humanising-card:hover {
+    transform: translateY(-5px);
+    background: #263247;
+}
+
+.humanising-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.humanising-card p {
+    color: #c7ccd5;
+    font-size: 15px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    padding: 130px 8%;
+    background: #f4f6f8;
+}
+
+.center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 70px;
+}
+
+.center > p:last-child {
+    margin-top: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 45px;
+    min-height: 280px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(23, 32, 51, 0.08);
+}
+
+.number {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.service-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #596273;
+}
+
+
+/* =========================
+   HRD CORP SECTION
+========================= */
+
+.hrdcorp {
+    padding: 130px 8%;
+    background: #ffffff;
+}
+
+.hrdcorp-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hrdcorp .eyebrow {
+    margin-bottom: 20px;
+}
+
+.hrdcorp h2 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+
+.hrdcorp p {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    font-size: 17px;
+    color: #596273;
+}
+
+.hrdcorp strong {
+    color: #172033;
+}
+
+.hrdcorp .btn {
+    margin-top: 25px;
+}
+
+
+/* =========================
+   OUR PEOPLE
+========================= */
+
+.team {
+    padding: 130px 8%;
+    background: #ffffff;
+}
+
+.team .section-heading {
+    margin-bottom: 80px;
+}
+
+.profile {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 60px;
+    background: #f4f6f8;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.profile:last-child {
+    margin-bottom: 0;
+}
+
+.profile-content {
+    max-width: 1000px;
+}
+
+.profile .eyebrow {
+    margin-bottom: 15px;
+}
+
+.profile h3 {
+    font-size: 42px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
+}
+
+.profile p {
+    color: #596273;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.profile .profile-intro {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #172033;
+    max-width: 900px;
+}
+
+.profile h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+.profile-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 45px 0;
+}
+
+.profile-highlights div {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+}
+
+.profile-highlights strong {
+    display: block;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.profile-highlights span {
+    display: block;
+    font-size: 13px;
+    color: #596273;
+}
+
+
+/* =========================
+   MOHD IMRAN PHOTO
+========================= */
+
+.profile-photo {
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   PROFILE WITH PHOTO (LIGHT)
+========================= */
+
+.profile.has-photo {
+    grid-template-columns: 240px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+
+/* =========================
+   ADVISOR PROFILE
+========================= */
+
+.advisor {
+    background: #172033;
+    color: white;
+    grid-template-columns: 240px 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.advisor p {
+    color: #c7ccd5;
+}
+
+.advisor .profile-intro {
+    color: white;
+}
+
+.advisor h4 {
+    color: white;
+}
+
+.advisor .profile-highlights div {
+    background: #1f293b;
+    border-color: #303a4d;
+}
+
+.advisor .profile-highlights span {
+    color: #c7ccd5;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 150px 8%;
+    background: #172033;
+    color: white;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.contact p {
+    margin-bottom: 35px;
+    color: #c7ccd5;
+}
+
+.contact .primary {
+    background: white;
+    color: #172033;
+}
+
+.contact .primary:hover {
+    background: #e8ebef;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 8%;
+    text-align: center;
+    font-size: 13px;
+    background: #111827;
+    color: white;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer p:last-child {
+    color: #9ca3af;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .humanising-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .logo-mark {
+        height: 34px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #eeeeee;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .hero-badge {
+        margin-top: 40px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 90px 20px;
+        gap: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 40px;
+    }
+
+
+    /* Humanising */
+
+    .humanising {
+        padding: 90px 20px;
+    }
+
+    .humanising-text .lead {
+        font-size: 20px;
+    }
+
+    .humanising-grid {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .humanising-card {
+        min-height: auto;
+    }
+
+
+    /* Services */
+
+    .services {
+        padding: 90px 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 30px;
+    }
+
+
+    /* HRD Corp */
+
+    .hrdcorp {
+        padding: 90px 20px;
+    }
+
+    .hrdcorp h2 {
+        font-size: 40px;
+    }
+
+
+    /* Our People */
+
+    .team {
+        padding: 90px 20px;
+    }
+
+    .team .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .profile {
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+
+    .profile h3 {
+        font-size: 32px;
+    }
+
+    .profile .profile-intro {
+        font-size: 17px;
+    }
+
+
+    /* Profile photos */
+
+    .advisor,
+    .profile.has-photo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+    }
+
+
+    /* Highlights */
+
+    .profile-highlights {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 35px 0;
+    }
+
+    .profile-highlights div {
+        padding: 25px;
+    }
+
+
+    /* Contact */
+
+    .contact {
+        padding: 100px 20px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 25px 20px;
+    }
+
+}
